@@ -11,5 +11,6 @@ repositories {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:9.0.0")
+    implementation("com.android.tools.build:gradle:9.0.0"
+    implementation(kotlin("gradle-plugin", "1.6.10"))
 }
