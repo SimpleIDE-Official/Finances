@@ -62,7 +62,7 @@ jobs:
               ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK to artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v6
         with:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
