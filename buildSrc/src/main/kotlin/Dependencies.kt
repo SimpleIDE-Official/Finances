@@ -14,7 +14,11 @@ object BuildScript {
 
     object Plugins {
         const val GMS = "com.google.gms:google-services:4.3.4"
-        const val ANDROID = "com.android.tools.build:gradle:9.0.0"
+        
+        // ACHTUNG: 9.0.0 ist sehr hoch/experimentell. 
+        // Falls der Build fehlschlägt, versuche hier "8.2.2" oder "7.4.2"
+        const val ANDROID = "com.android.tools.build:gradle:8.2.2" 
+        
         const val JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.10.0.0"
         const val KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VER"
         const val NAVIGATION =
@@ -32,105 +36,58 @@ object Libraries {
     const val COIL = "io.coil-kt:coil:1.1.0"
     const val TIMBER = "com.github.ajalt:timberkt:1.5.1"
     const val FLEXBOX = "com.google.android:flexbox:2.0.1"
-    const val EDGE_TO_EDGE = "de.halfbit:edge-to-edge:1.0-rc1"
-    const val JAVAX_ANNOTATIONS = "javax.inject:javax.inject:1"
-    const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$KOTLIN_VER"
-    const val PAGE_INDICATOR = "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.1"
-    const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
-
-    object Android {
-
-        object Lifecycle : DependenciesCollection {
-
-            private const val VER = "2.3.0-rc01"
-            private const val ARTIFACT = "androidx.lifecycle"
-
-            override fun invoke(): Collection<String> {
-                return listOf(
-                    "$ARTIFACT:lifecycle-common-java8:$VER",
-                    "$ARTIFACT:lifecycle-extensions:2.2.0",
-                    "$ARTIFACT:lifecycle-viewmodel-ktx:$VER",
-                    "$ARTIFACT:lifecycle-livedata-ktx:$VER"
-                )
-            }
-
-        }
-
-        const val CORE = "androidx.core:core-ktx:1.5.0-beta01"
-
-        const val APPCOMPAT = "androidx.appcompat:appcompat:1.3.0-beta01"
-        const val FRAGMENT = "androidx.fragment:fragment-ktx:1.3.0-rc01"
-        const val TRANSITION = "androidx.transition:transition-ktx:1.4.0-rc01"
-        const val VIEWPAGER = "androidx.viewpager2:viewpager2:1.1.0-alpha01"
-        const val DESIGN = "com.google.android.material:material:1.3.0-rc01"
-        const val RECYCLER_VIEW = "androidx.recyclerview:recyclerview:1.2.0-beta01"
-        const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.0.2"
-
-        object Navigation : DependenciesCollection {
-
-            private const val ARTIFACT = "androidx.navigation"
-
-            override fun invoke(): Collection<String> {
-                return listOf(
-                    "$ARTIFACT:navigation-ui-ktx:$NAVIGATION_VER",
-                    "$ARTIFACT:navigation-runtime:$NAVIGATION_VER",
-                    "$ARTIFACT:navigation-fragment-ktx:$NAVIGATION_VER"
-                )
-            }
-
-        }
-
-    }
-
-    object Adapter : DependenciesCollection {
-
-        private const val VER = "1.3.0"
-
-        override fun invoke(): Collection<String> = listOf(
-            "serg.chuprin:multiviewadapter:$VER",
-            "serg.chuprin:multiviewadapter-kt-extensions:$VER"
-        )
-
-    }
-
-    object Preferences {
-
-        const val LIBRARY = "com.afollestad.rxkprefs:core:2.0.3"
-    }
+    const val DESUGARING = "com.android.tools:desugar_jdk_libs:1.1.1"
+    const val INSETTER = "dev.chrisbanes.insetter:insetter-dbx:0.3.1"
 
     object Coroutines {
-
-        const val VER = "1.4.2"
-
+        const val VER = "1.7.3"
         const val CORE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VER"
         const val ANDROID = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VER"
+    }
 
-        object Bindings : DependenciesCollection {
+    object AndroidX {
+        const val CORE = "androidx.core:core-ktx:1.12.0"
+        const val APPCOMPAT = "androidx.appcompat:appcompat:1.6.1"
+        const val FRAGMENT = "androidx.fragment:fragment-ktx:1.6.2"
+        const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.1.4"
+        const val RECYCLER_VIEW = "androidx.recyclerview:recyclerview:1.3.2"
+        const val PREFERENCE = "androidx.preference:preference-ktx:1.2.1"
+        const val MATERIAL = "com.google.android.material:material:1.11.0"
+        const val VIEW_PAGER = "androidx.viewpager2:viewpager2:1.0.0"
 
-            private const val VER = "1.0.0"
-
-            override fun invoke(): Collection<String> {
-                return listOf(
-                    "io.github.reactivecircus.flowbinding:flowbinding-android:$VER",
-                    "io.github.reactivecircus.flowbinding:flowbinding-material:$VER"
-                )
-            }
-
+        object Lifecycle {
+            private const val VER = "2.7.0"
+            const val COMMON = "androidx.lifecycle:lifecycle-common-java8:$VER"
+            const val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$VER"
+            const val RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:$VER"
         }
 
+        object Navigation {
+            const val FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VER"
+            const val UI = "androidx.navigation:navigation-ui-ktx:$NAVIGATION_VER"
+        }
+
+    }
+
+    object Mvi {
+        private const val VER = "3.0.1"
+        const val CORE = "com.arkivanov.mvikotlin:mvikotlin:$VER"
+        const val MAIN = "com.arkivanov.mvikotlin:mvikotlin-main:$VER"
+        const val LOGGING = "com.arkivanov.mvikotlin:mvikotlin-logging:$VER"
+        const val COROUTINES = "com.arkivanov.mvikotlin:mvikotlin-extensions-coroutines:$VER"
     }
 
     object Dagger {
-
-        private const val VER = "2.30.1"
-
-        const val LIBRARY = "com.google.dagger:dagger:$VER"
+        private const val VER = "2.50"
+        const val LIB = "com.google.dagger:dagger:$VER"
         const val COMPILER = "com.google.dagger:dagger-compiler:$VER"
-
     }
 
-    object Infrastructure {
-        const val AUTH = "com.google.firebase:firebase-auth:20.0.2"
+    object Firebase {
+        const val BOM = "com.google.firebase:firebase-bom:26.2.0"
+        const val ANALYTICS = "com.google.firebase:firebase-analytics-ktx"
+        const val CRASHLYTICS = "com.google.firebase:firebase-crashlytics-ktx"
+        const val AUTH = "com.google.firebase:firebase-auth-ktx:20.0.2"
         const val FIRESTORE = "com.google.firebase:firebase-firestore-ktx:22.0.1"
         const val GMS_AUTH = "com.google.android.gms:play-services-auth:19.0.0"
         const val PLAY_SERVICES_KTX = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.4.2"
@@ -157,12 +114,8 @@ object Libraries {
         const val ASSERTIONS = "org.jetbrains.kotlin:kotlin-test:$KOTLIN_VER"
         const val SPEK_JVM = "org.spekframework.spek2:spek-dsl-jvm:$SPEK_VER"
         const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${VER}"
-        const val KOTLIN_REFLECT = "org.jetbrains.kotlin:kotlin-reflect:$KOTLIN_VER"
+        const val JUNIT_ENGINE = "org.junit.jupiter:junit-jupiter-engine:$JUNIT_VER"
         const val SPEK_RUNNER = "org.spekframework.spek2:spek-runner-junit5:$SPEK_VER"
-        const val COROUTINES_DEBUG = "org.jetbrains.kotlinx:kotlinx-coroutines-debug:${VER}"
-
-        const val JUPITER_API = "org.junit.jupiter:junit-jupiter-api:$JUNIT_VER"
-        const val JUPITER_ENGINE = "org.junit.jupiter:junit-jupiter-engine:$JUNIT_VER"
 
     }
 
