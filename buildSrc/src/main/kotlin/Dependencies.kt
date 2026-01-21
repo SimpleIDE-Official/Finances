@@ -14,7 +14,7 @@ object BuildScript {
 
     object Plugins {
         const val GMS = "com.google.gms:google-services:4.3.4"
-        const val ANDROID = "com.android.tools.build:gradle:8.1.1"
+        const val ANDROID = "com.android.tools.build:gradle:9.0.0"
         const val JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.7.0.0"
         const val KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VER"
         const val NAVIGATION =
