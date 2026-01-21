@@ -4,7 +4,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("kotlin-android-extensions")
+    id(BuildScript.Plugins.PARCELIZE)
     kotlin("plugin.serialization") version BuildScript.Versions.KOTLIN_VER
 }
 
