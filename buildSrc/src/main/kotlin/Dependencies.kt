@@ -15,12 +15,17 @@ object BuildScript {
     object Plugins {
         const val GMS = "com.google.gms:google-services:4.3.4"
         
-        // ACHTUNG: 9.0.0 ist sehr hoch/experimentell. 
-        // Falls der Build fehlschlägt, versuche hier "8.2.2" oder "7.4.2"
+        // Nutze eine stabile AGP Version (9.0.0 ist oft noch experimentell/beta)
         const val ANDROID = "com.android.tools.build:gradle:8.2.2" 
         
         const val JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.10.0.0"
+        
+        // Das Haupt-Kotlin-Plugin (beinhaltet Parcelize Logik)
         const val KOTLIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VER"
+        
+        // NEU: Parcelize Plugin ID für die Verwendung in Modulen
+        const val PARCELIZE = "kotlin-parcelize"
+
         const val NAVIGATION =
             "androidx.navigation:navigation-safe-args-gradle-plugin:$NAVIGATION_VER"
         const val GRAPH_VISUALIZER =
