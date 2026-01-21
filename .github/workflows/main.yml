@@ -31,7 +31,8 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           java-version: '11'
-
+          distribution: 'temurin'
+          
       - name: 🧹 Clean Project
         run: |
           chmod +x ./gradlew
@@ -58,6 +59,7 @@ jobs:
       - uses: actions/setup-java@v5
         with:
           java-version: '11'
+          distribution: 'temurin'
           
       - name: 🧹 Clean Project
         run: |
