@@ -18,5 +18,4 @@ dependencies {
     implementation("com.vanniktech:gradle-dependency-graph-generator-plugin:0.5.0")
     implementation("gradle.plugin.ru.cleverpumpkin.proguard-dictionaries-generator:plugin:1.0.8")
     implementation("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.2"
-    }
 }
