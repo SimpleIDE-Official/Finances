@@ -5,7 +5,7 @@ plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("kotlin-android-extensions")
+    id(BuildScript.Plugins.PARCELIZE)
     id("ru.cleverpumpkin.proguard-dictionaries-generator")
     id("androidx.navigation.safeargs")
 }
