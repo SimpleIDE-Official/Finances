@@ -19,8 +19,10 @@ plugins {
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenCentral()
+        maven {
+          url = uri("https://jcenter.bintray.com/")
+        } // Wichtig für serg.chuprin
         gradlePluginPortal()
     }
     dependencies {
@@ -37,9 +39,13 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         mavenCentral()
-        maven("http://jitpack.io/")
+        maven {
+          url = uri("https://jcenter.bintray.com/")
+        } // Wichtig für serg.chuprin
+        maven {
+          url = uri("http://jitpack.io/")
+        }
     }
 }
 
