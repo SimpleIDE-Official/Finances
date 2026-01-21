@@ -35,11 +35,13 @@ jobs:
           
       - name: 🧹 Clean Project
         run: |
-          chmod +x ./gradlew
+          sudo chmod +x ./gradlew
           ./gradlew clean
           
       - name: Unit tests
-        run: ./gradlew testDevUnitTest --stacktrace
+        run: |
+          sudo chmod +x ./gradlew
+          ./gradlew testDevUnitTest --stacktrace
 
    build_apk:
     name: Upload apk
@@ -63,13 +65,13 @@ jobs:
           
       - name: 🧹 Clean Project
         run: |
-          chmod +x ./gradlew
+          sudo chmod +x ./gradlew
           ./gradlew clean
           
       - name: Build debug APK
         run: |
-              sudo chmod +x ./gradlew
-              ./gradlew assembleDebug --stacktrace
+          sudo chmod +x ./gradlew
+          ./gradlew assembleDebug --stacktrace
 
       - name: Upload APK to artifacts
         uses: actions/upload-artifact@v6
