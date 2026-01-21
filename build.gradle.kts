@@ -203,9 +203,11 @@ fun Project.addKotlinCompilerFlags() {
     }
 }
 
+/*
 fun Project.enableExperimentalKotlinExtensions() {
     extensions.findByType(AndroidExtensionsExtension::class)?.isExperimental = true
 }
+*/
 
 fun Project.forceDependencyVersions() {
     configurations.all {
