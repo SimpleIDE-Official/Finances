@@ -67,8 +67,8 @@ subprojects {
                 }
 
                 with(compileOptions) {
-                    sourceCompatibility = JavaVersion.VERSION_1_8
-                    targetCompatibility = JavaVersion.VERSION_1_8
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
                 }
                 packagingOptions {
                     exclude("META-INF/DEPENDENCIES")
@@ -186,7 +186,7 @@ fun TestedExtension.configureBuildTypes() {
 fun Project.addKotlinCompilerFlags() {
     tasks.withType<KotlinCompile>().configureEach {
         kotlinOptions {
-            jvmTarget = "1.8"
+            jvmTarget = "17"
             kotlinOptions.freeCompilerArgs += listOf(
                 "-XXLanguage:+InlineClasses",
                 "-Xallow-result-return-type",
