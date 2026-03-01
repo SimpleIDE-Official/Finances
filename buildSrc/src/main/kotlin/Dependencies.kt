@@ -92,7 +92,7 @@ object Libraries {
         const val BOM = "com.google.firebase:firebase-bom:26.2.0"
         const val ANALYTICS = "com.google.firebase:firebase-analytics-ktx"
         const val CRASHLYTICS = "com.google.firebase:firebase-crashlytics-ktx"
-        const val AUTH = "com.google.firebase:firebase-auth-ktx:20.0.2"
+        const val AUTH = "com.google.firebase:firebase-auth-ktx:20.0.4"
         const val FIRESTORE = "com.google.firebase:firebase-firestore-ktx:22.0.1"
         const val GMS_AUTH = "com.google.android.gms:play-services-auth:19.0.0"
         const val PLAY_SERVICES_KTX = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.4.2"
