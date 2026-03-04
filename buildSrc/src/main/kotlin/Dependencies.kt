@@ -109,7 +109,7 @@ object Libraries {
     object Tests {
 
         private const val JUNIT_VER = "5.7.0"
-        private const val SPEK_VER = "2.0.15"
+        private const val SPEK_VER = "2.0.19"
 
         const val MOCKK = "io.mockk:mockk:1.9.3"
         const val STRIKT = "io.strikt:strikt-core:0.28.1"
