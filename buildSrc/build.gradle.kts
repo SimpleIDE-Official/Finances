@@ -14,7 +14,7 @@ dependencies {
 
     // Stellt die Android Gradle Klassen bereit (BaseExtension etc.)
     // Achtung: Version muss kompatibel mit deiner Dependencies.kt sein.
-    implementation("com.android.tools.build:gradle:8.2.2")
+    implementation("com.android.tools.build:gradle:9.1.0")
     
     // Hilfreich für Plugin-Entwicklung
     implementation(gradleApi())
