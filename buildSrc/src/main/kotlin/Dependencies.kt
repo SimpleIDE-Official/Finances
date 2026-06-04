@@ -51,7 +51,7 @@ object Libraries {
     }
 
     object AndroidX {
-        const val CORE = "androidx.core:core-ktx:1.12.0"
+        const val CORE = "androidx.core:core-ktx:1.19.0"
         const val APPCOMPAT = "androidx.appcompat:appcompat:1.6.1"
         const val FRAGMENT = "androidx.fragment:fragment-ktx:1.6.2"
         const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.1.4"
