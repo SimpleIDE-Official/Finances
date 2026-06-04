@@ -16,7 +16,7 @@ object BuildScript {
         const val GMS = "com.google.gms:google-services:4.3.4"
         
         // Nutze eine stabile AGP Version (9.0.0 ist oft noch experimentell/beta)
-        const val ANDROID = "com.android.tools.build:gradle:8.2.2" 
+        const val ANDROID = "com.android.tools.build:gradle:8.13.2" 
         
         const val JUNIT5 = "de.mannodermaus.gradle.plugins:android-junit5:1.10.0.0"
         
