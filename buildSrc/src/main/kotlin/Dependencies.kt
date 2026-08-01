@@ -54,7 +54,7 @@ object Libraries {
         const val CORE = "androidx.core:core-ktx:1.12.0"
         const val APPCOMPAT = "androidx.appcompat:appcompat:1.6.1"
         const val FRAGMENT = "androidx.fragment:fragment-ktx:1.6.2"
-        const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.1.4"
+        const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:2.2.2"
         const val RECYCLER_VIEW = "androidx.recyclerview:recyclerview:1.3.2"
         const val PREFERENCE = "androidx.preference:preference-ktx:1.2.1"
         const val MATERIAL = "com.google.android.material:material:1.11.0"
