@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     // Stellt das Kotlin Gradle Plugin bereit (inkl. Parcelize Logik)
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.25")
 
     // Stellt die Android Gradle Klassen bereit (BaseExtension etc.)
     // Achtung: Version muss kompatibel mit deiner Dependencies.kt sein.
