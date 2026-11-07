@@ -8,7 +8,7 @@ import Libraries.Coroutines.VER
 object BuildScript {
 
     object Versions {
-        const val KOTLIN_VER = "1.9.20"
+        const val KOTLIN_VER = "1.9.25"
         const val NAVIGATION_VER = "2.3.2"
     }
 
